@@ -26,7 +26,7 @@ const Page = () => {
     <Main>
       <ImageBackground
         source={{
-          uri: 'https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/rLb2cwF3Pazuxaj0sRXQ037tGI1.jpg',
+          uri: 'https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,00192f,00baff)/ctxm191q5o3axFzQsvNPlbKoSYv.jpg',
         }}
         style={{ width: '100%', height: 200 }}>
         <Container>

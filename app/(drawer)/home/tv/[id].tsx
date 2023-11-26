@@ -6,7 +6,7 @@ import { MediaType } from '@/interfaces/apiresults';
 const Page = () => {
   const { id } = useLocalSearchParams<{ id: string }>();
 
-  return <DetailsPage id={id} mediaType={MediaType.Movie} />;
+  return <DetailsPage id={id} mediaType={MediaType.TV} />;
 };
 
 export default Page;
