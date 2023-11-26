@@ -3,8 +3,9 @@ import { MediaType } from '@/interfaces/apiresults';
 import { useQuery } from '@tanstack/react-query';
 import { getMovieDetails } from '@/services/api';
 import { Main } from '@/tamagui.config';
-import { H1, Image, Paragraph, ScrollView, Text, YStack } from 'tamagui';
+import { H1, Paragraph, ScrollView, Text, YStack } from 'tamagui';
 import { ImageBackground } from 'react-native';
+import Animated from 'react-native-reanimated';
 
 type DetailsPageProps = {
   id: string;
@@ -22,14 +23,13 @@ const DetailsPage = ({ id, mediaType }: DetailsPageProps) => {
           source={{
             uri: `https://image.tmdb.org/t/p/w400${movieQuery.data?.backdrop_path}`,
           }}>
-          <Image
+          <Animated.Image
             source={{
               uri: `https://image.tmdb.org/t/p/w400${movieQuery.data?.poster_path}`,
             }}
-            width={200}
-            height={300}
-            margin={20}
             borderRadius={6}
+            style={{ margin: 20, height: 300, width: 200 }}
+            sharedTransitionTag={`${mediaType === 'movie' ? 'movie' : 'tv'}-${id}`}
           />
         </ImageBackground>
 
