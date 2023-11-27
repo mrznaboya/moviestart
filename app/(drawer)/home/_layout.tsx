@@ -1,6 +1,5 @@
 import { DrawerToggleButton } from '@react-navigation/drawer';
 import { Stack } from 'expo-router';
-import React from 'react';
 import { useTheme } from 'tamagui';
 
 export const unstable_settings = {
@@ -25,6 +24,7 @@ const Layout = () => {
           headerLeft: () => <DrawerToggleButton tintColor="#FFF" />,
         }}
       />
+
       <Stack.Screen
         name="movie/[id]"
         options={{

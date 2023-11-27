@@ -21,3 +21,5 @@ expo-env.d.ts
 .metro-health-check*
 
 .env
+ios/
+android/
